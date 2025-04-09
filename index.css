@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(190, 190, 190);
+    background-image: url("badgewar.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -100px;
+    background-blend-mode: soft-light;
+}
+
+
+.head{
+    color: rgb(255, 255, 255);
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90px;
+    outline:5px solid black;
+    background-color: blueviolet;
+    padding: 10px;
+}
+
+.member{
+    text-align: center;
+    font-size: 45px;
+    background-color: rgb(255 255 255 /0.4);
+    outline: 5px solid black;
+    padding: 10px;
+    margin-left: 350px;
+    margin-right: 350px;
+    
+}
+
+.pick1 {
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    
+}
+
+.but {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn1 {
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    font-family: Arial Black;
+}
+
+
+.status {
+    font-family: Georgia;
+    display: block;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-style: dashed;
+    border-width: 5px;
+    background-color: rgb(255 255 255 /0.4);
+}
+
