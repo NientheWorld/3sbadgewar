@@ -1,4 +1,5 @@
 
+
     html, body{
         margin: 10px;
         padding: 0;
@@ -9,7 +10,6 @@
         background-size: cover;
         background-position: -100px;
         background-blend-mode: soft-light;
-        overflow: hidden;
     }
 
     .head{
