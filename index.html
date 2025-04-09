@@ -4,47 +4,71 @@
 <meta name="viewport" 
 content="width=device-width, initial-scale=1">
 <title>tripleS Game</title>
+<link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-<h1>TripleS Badge Game</h1>
+<div class="img"></div>
+<h1 class="head">TripleS BadgeWar Game</h1>
 
 <div class="member">
-    <b><label for="updates">Choose your S</label></b>
+    <b><label for="updates">CHOOSE YOUR S</label></b>
+    <br>
     <select name="updates" class="pick1" id="choose">
         <option value="none">----</option>
-        <option value="Seoyeon">S1 Seoyeon</option>
-        <option value="Hyerin">S2 Hyerin</option>
-        <option value="Jiwoo">S3 Jiwoo</option>
-        <option value="Chaeyeon">S4 Chaeyeon</option>
-        <option value="Yooyeon">S5 Yooyeon</option>
-        <option value="Soomin">S6 Soomin</option>
-        <option value="Nakyoung">S7 Nakyoung</option>
-        <option value="Yubin">S8 Yubin</option>
-        <option value="Kaede">S9 Kaede</option>
-        <option value="Dahyun">S10 Dahyun</option>
-        <option value="Kotone">S11 Kotone</option>
-        <option value="Yeonji">S12 Yeonji</option>
-        <option value="Nien">S13 Nien</option>
-        <option value="Sohyun">S14 Sohyun</option>
-        <option value="Xinyu">S15 Xinyu</option>
-        <option value="Mayu">S16 Mayu</option>
-        <option value="Lynn">S17 Lynn</option>
-        <option value="Joobin">S18 Joobin</option>
-        <option value="Hayeon">S19 Hayeon</option>
-        <option value="Shion">S20 Shion</option>
-        <option value="Chaewon">S21 Chaewon</option>
-        <option value="Sullin">S22 Sullin</option>
-        <option value="Seoah">S23 Seoah</option>
-        <option value="Jiyeon">S24 Jiyeon</option> 
+        <option value="Seoyeon" style="background-color: #1e90ff;">S1 Seoyeon</option>
+        <option value="Hyerin" style="background-color: #Bf00ff;">S2 Hyerin</option>
+        <option value="Jiwoo" style="background-color: #fff44f;">S3 Jiwoo</option>
+        <option value="Chaeyeon" style="background-color: #66cc33;">S4 Chaeyeon</option>
+        <option value="Yooyeon" style="background-color: #C197b8;">S5 Yooyeon</option>
+        <option value="Soomin" style="background-color: #Ef98aa;">S6 Soomin</option>
+        <option value="Nakyoung" style="background-color: #5f9ea0;">S7 Nakyoung</option>
+        <option value="Yubin" style="background-color: #FFE4E1;">S8 Yubin</option>
+        <option value="Kaede" style="background-color: #Ffcc33;">S9 Kaede</option>
+        <option value="Dahyun" style="background-color: #Fba0e3;">S10 Dahyun</option>
+        <option value="Kotone" style="background-color: #ffdf00;">S11 Kotone</option>
+        <option value="Yeonji" style="background-color: #4169E1;">S12 Yeonji</option>
+        <option value="Nien" style="background-color: #Ffa343;">S13 Nien</option>
+        <option value="Sohyun" style="background-color: #1434a4;">S14 Sohyun</option>
+        <option value="Xinyu" style="background-color: #c80815;">S15 Xinyu</option>
+        <option value="Mayu" style="background-color: #Ffa089;">S16 Mayu</option>
+        <option value="Lynn" style="background-color: #8a2be2;">S17 Lynn</option>
+        <option value="Joobin" style="background-color: #B1DD52;">S18 Joobin</option>
+        <option value="Hayeon" style="background-color: #48D1CC;">S19 Hayeon</option>
+        <option value="Shion" style="background-color: #c71585;">S20 Shion</option>
+        <option value="Chaewon" style="background-color: #C9A0DC;">S21 Chaewon</option>
+        <option value="Sullin" style="background-color: #8fbc8f;">S22 Sullin</option>
+        <option value="Seoah" style="background-color: #E0ffff;">S23 Seoah</option>
+        <option value="Jiyeon" style="background-color: #FBAB60;">S10 Dahyun</option> 
     </select>
 </div>
 <br>
+<div class="but">
 <button class="btn1" type="button" onclick="setTimeout(before)" id="start">Let the Badgewar Begin!</button>
+</div>
 <br><br>
-<textarea class="status" id="sts" rows="50" cols="50" placeholder="Ready?!" readonly></textarea>
-
+<textarea class="status" id="sts" rows="50" cols="65" style="font-size: 30px;">Ready?</textarea>
 <script>
+
+    const mem = ["Seoyeon","Hyerin", "Jiwoo","Chaeyeon","Yooyeon","Soomin","Nakyoung","Yubin","Kaede","Dahyun","Kotone","Yeonji","Nien","Sohyun","Xinyu","Mayu","Lynn",
+            "Joobin","Hayeon","Shion","Chaewon","Sullin","Seoah","Jiyeon"];
+    let meml = mem.length;
+    const st = ["runs quickly 🏃‍♀️", "fell into the mud 😣", "got stuck in the mud 😫","helps", "walking around 🚶‍♀️", "shouting for help📢", "covered in mud ",
+            "slips in the mud", "boosts up🔋","unites together", "got distracted by"]
+    let st1 = st.length;
+
+    function rand(){
+        var pck = Math.floor(Math.random()*meml);
+        let let1 = mem.at(pck);
+        return let1
+    }
+    
+    function stat(){
+        var pck1 = Math.floor(Math.random()*st1);
+        let let2 = st.at(pck1);
+        return let2
+    }
+
     function before(){
         var cho = document.getElementById("choose").value;
         if (cho == "none"){
@@ -87,163 +111,306 @@ content="width=device-width, initial-scale=1">
                 document.getElementById("sts").innerHTML += "Round 1:" + rst + "\n\n";
             },10000)
 
-            const mem = ["Seoyeon","Hyerin", "Jiwoo","Chaeyeon","Yooyeon","Soomin","Nakyoung","Yubin","Kaede","Dahyun","Kotone","Yeonji","Nien","Sohyun","Xinyu","Mayu","Lynn",
-            "Joobin","Hayeon","Shion","Chaewon","Sullin","Seoah","Jiyeon"];
-            const st = ["runs quickly 🏃‍♀️", "fell into the mud 😣", "got stuck in the mud 😫","helps a member 🤼", "walking around 🚶‍♀️", "shouting for help📢", "covered in mud ","slips in the mud", "boosts up🔋"]
-            let st1 = st.length;
-
+           
             //1
             setTimeout(() => {
- let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
+                var let2 = stat();
+                
+                if (let2 == "helps") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
+                }
+                
+                else if (let2 == "got distracted by") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
+                }
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
+                else if (let2 == "unites together") {
+                    var letsub = rand();
+                    var letsub2 = rand();
+                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
+                }
 
-                document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },11000)
+                else {
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
+                }
+                
+            },13000)
 
             //2
             setTimeout(() => {
- let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
+                var let2 = stat();
+                
+                if (let2 == "helps") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
+                }
+                
+                else if (let2 == "got distracted by") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
+                }
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
+                else if (let2 == "unites together") {
+                    var letsub = rand();
+                    var letsub2 = rand();
+                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
+                }
 
-                document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },15000)
+                else {
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
+                }
+            },16000)
 
             //3
             setTimeout(() => {
- let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
+                var let2 = stat();
+                
+                if (let2 == "helps") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
+                }
+                
+                else if (let2 == "got distracted by") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
+                }
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
+                else if (let2 == "unites together") {
+                    var letsub = rand();
+                    var letsub2 = rand();
+                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
+                }
 
-                document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },20000)
+                else {
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
+                }
+            },19000)
 
             //4
             setTimeout(() => {
- let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
+                var let2 = stat();
+                
+                if (let2 == "helps") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
+                }
+                
+                else if (let2 == "got distracted by") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
+                }
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
+                else if (let2 == "unites together") {
+                    var letsub = rand();
+                    var letsub2 = rand();
+                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
+                }
 
-                document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },25000)
+                else {
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
+                }
+            },22000)
             
             //5
             setTimeout(() => {
- let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
+                var let2 = stat();
+                
+                if (let2 == "helps") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
+                }
+                
+                else if (let2 == "got distracted by") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
+                }
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
+                else if (let2 == "unites together") {
+                    var letsub = rand();
+                    var letsub2 = rand();
+                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
+                }
 
-                document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },30000)
+                else {
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
+                }
+            },25000)
 
             //6
             setTimeout(() => {
- let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
+                var let2 = stat();
+                
+                if (let2 == "helps") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
+                }
+                
+                else if (let2 == "got distracted by") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
+                }
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
+                else if (let2 == "unites together") {
+                    var letsub = rand();
+                    var letsub2 = rand();
+                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
+                }
 
-                document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },35000)
+                else {
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
+                }
+            },28000)
 
             //7
             setTimeout(() => {
- let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
+                var let2 = stat();
+                
+                if (let2 == "helps") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
+                }
+                
+                else if (let2 == "got distracted by") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
+                }
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
+                else if (let2 == "unites together") {
+                    var letsub = rand();
+                    var letsub2 = rand();
+                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
+                }
 
-                document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },40000)
+                else {
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
+                }
+            },31000)
 
             //8
             setTimeout(() => {
- let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
+                var let2 = stat();
+                
+                if (let2 == "helps") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
+                }
+                
+                else if (let2 == "got distracted by") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
+                }
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
+                else if (let2 == "unites together") {
+                    var letsub = rand();
+                    var letsub2 = rand();
+                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
+                }
 
-                document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },45000)
+                else {
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
+                }
+            },34000)
 
             //9
             setTimeout(() => {
- let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
+                var let2 = stat();
+                
+                if (let2 == "helps") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
+                }
+                
+                else if (let2 == "got distracted by") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
+                }
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
+                else if (let2 == "unites together") {
+                    var letsub = rand();
+                    var letsub2 = rand();
+                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
+                }
 
-                document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },50000)
+                else {
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
+                }
+            },37000)
 
             //10
             setTimeout(() => {
- let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
+                var let2 = stat();
+                
+                if (let2 == "helps") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
+                }
+                
+                else if (let2 == "distracted") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " got " + let2 + " by " + letsub + " 👀\n";
+                }
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
+                else if (let2 == "unites together") {
+                    var letsub = rand();
+                    var letsub2 = rand();
+                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " unites together" + "\n";
+                }
 
-                document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },55000)
-
+                else {
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
+                }
+            },40000)
+            
             //11
             setTimeout(() => {
- let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
+                var let2 = stat();
+                
+                if (let2 == "helps") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n\n";
+                }
+                
+                else if (let2 == "distracted") {
+                    var letsub = rand();
+                    document.getElementById("sts").innerHTML += let1 + " got " + let2 + " by " + letsub + " 👀\n\n";
+                }
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
+                else if (let2 == "unite") {
+                    var letsub = rand();
+                    var letsub2 = rand();
+                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " hold their hands and unite together" + "\n\n";
+                }
 
-                document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n\n" ;
-            },60000)
+                else {
+                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
+                }
+            },43000)
 
             //12
             setTimeout(() => {
- let meml = mem.length;
-                let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
-
-                
-
-                document.getElementById("sts").innerHTML += "🏆" + let1 + " got the 1st badge 🏆"  + "\n\n" ;
+                document.getElementById("sts").innerHTML += "🏆" + let1 + " got the first badge 🎖"  + "\n\n" ;
                 mem.splice(pck,1);
                 
-            },65000)
+            },46000)
 
             //13
             setTimeout(() => {
- let meml = mem.length;
+                let mode = rone.length;
                 var pck = Math.floor(Math.random()*meml);
                 let let1 = mem.at(pck);
 
@@ -251,11 +418,11 @@ content="width=device-width, initial-scale=1">
                 let let2 = st.at(pck1);
 
                 document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },70000)
+            },49000)
 
             //14
             setTimeout(() => {
- let meml = mem.length;
+                let mode = rone.length;
                 var pck = Math.floor(Math.random()*meml);
                 let let1 = mem.at(pck);
 
@@ -263,27 +430,20 @@ content="width=device-width, initial-scale=1">
                 let let2 = st.at(pck1);
 
                 document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n\n" ;
-            },75000)
+            },52000)
 
             //15
             setTimeout(() => {
-                let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
-
-                
-
-                document.getElementById("sts").innerHTML += "🏆" + let1 + " got the 2nd badge 🏆 "  + "\n\n" ;
+                document.getElementById("sts").innerHTML += "🏆" + let1 + " got the second badge 🎖"  + "\n\n" ;
                 mem.splice(pck,1);
                 
-            },80000)
+            },55000)
 
             //16
             setTimeout(() => {
- let meml = mem.length;
+                let mode = rone.length;
                 var pck = Math.floor(Math.random()*meml);
                 let let1 = mem.at(pck);
 
@@ -291,11 +451,11 @@ content="width=device-width, initial-scale=1">
                 let let2 = st.at(pck1);
 
                 document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },85000)
+            },58000)
 
             //17
             setTimeout(() => {
- let meml = mem.length;
+                let mode = rone.length;
                 var pck = Math.floor(Math.random()*meml);
                 let let1 = mem.at(pck);
 
@@ -303,28 +463,20 @@ content="width=device-width, initial-scale=1">
                 let let2 = st.at(pck1);
 
                 document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n\n" ;
-            },90000)
+            },61000)
 
             //18
             setTimeout(() => {
- let meml = mem.length;
-                let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
-
-                
-
-                document.getElementById("sts").innerHTML += "🏆" + let1 + " got the 3rd badge 🏆"  + "\n" ;
+                document.getElementById("sts").innerHTML += "🏆" + let1 + " got the third badge 🎖"  + "\n\n" ;
                 mem.splice(pck,1);
                 
-            },95000)
+            },64000)
 
             //19
             setTimeout(() => {
- let meml = mem.length;
+                let mode = rone.length;
                 var pck = Math.floor(Math.random()*meml);
                 let let1 = mem.at(pck);
 
@@ -332,11 +484,11 @@ content="width=device-width, initial-scale=1">
                 let let2 = st.at(pck1);
 
                 document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },100000)
+            },67000)
 
             //20
             setTimeout(() => {
- let meml = mem.length;
+                let mode = rone.length;
                 var pck = Math.floor(Math.random()*meml);
                 let let1 = mem.at(pck);
 
@@ -344,27 +496,20 @@ content="width=device-width, initial-scale=1">
                 let let2 = st.at(pck1);
 
                 document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n\n" ;
-            },105000)
+            },70000)
 
             //21
             setTimeout(() => {
-                let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
-
-                
-
-                document.getElementById("sts").innerHTML += "🏆" + let1 + " got the 4th badge 🏆"  + "\n\n" ;
+                document.getElementById("sts").innerHTML += "🏆" + let1 + " got the fourth badge 🎖"  + "\n\n" ;
                 mem.splice(pck,1);
                 
-            },110000)
+            },73000)
 
             //22
             setTimeout(() => {
- let meml = mem.length;
+                let mode = rone.length;
                 var pck = Math.floor(Math.random()*meml);
                 let let1 = mem.at(pck);
 
@@ -372,11 +517,11 @@ content="width=device-width, initial-scale=1">
                 let let2 = st.at(pck1);
 
                 document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-            },115000)
+            },76000)
 
             //23
             setTimeout(() => {
- let meml = mem.length;
+                let mode = rone.length;
                 var pck = Math.floor(Math.random()*meml);
                 let let1 = mem.at(pck);
 
@@ -384,23 +529,16 @@ content="width=device-width, initial-scale=1">
                 let let2 = st.at(pck1);
 
                 document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n\n" ;
-            },120000)
+            },79000)
 
             //24
             setTimeout(() => {
-                let meml = mem.length;
-                var pck = Math.floor(Math.random()*meml);
-                let let1 = mem.at(pck);
+                var let1 = rand();
 
-                var pck1 = Math.floor(Math.random()*st1);
-                let let2 = st.at(pck1);
-
-                
-
-                document.getElementById("sts").innerHTML += "🏆" + let1 + " won the 5th place 🏆"  + "\n\n" ;
+                document.getElementById("sts").innerHTML += "🏆" + let1 + " got the fifth badge 🎖"  + "\n\n" ;
                 mem.splice(pck,1);
                 
-            },125000)
+            },82000)
 
             //24
             setTimeout(() => {
@@ -413,10 +551,9 @@ content="width=device-width, initial-scale=1">
                     document.getElementById("sts").innerHTML += cho + " Won the game 🎖" ;
                 }
                 
-            },125000)
+            },85000)
         }
         
-
 
     }
 
