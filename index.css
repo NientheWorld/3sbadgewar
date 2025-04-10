@@ -1,156 +1,158 @@
-    html, body{
-        margin: 10px;
-        padding: 0;
-        height: 100%;
-        background-color: rgb(190, 190, 190);
-        background-image: url("badgewar.png");
-        background-repeat: no-repeat;
-        background-size: 350vw;
-        background-position: -50vw;
-        background-attachment: fixed;
-        background-blend-mode: soft-light;
-    }
-
-
-
-    .head{
-        position: relative;
-        color: rgb(255, 255, 255);
-        font-family: Arial, Helvetica, sans-serif;
-        outline:5px solid black;
-        background-color: blueviolet;
-        padding: 2.5%;
-        font-size: 7vw;
-        margin-left:auto;
-        margin-right:auto;
-        text-align: center;
-        
-    }
-
-    .member{
-        position: relative;
-        text-align: center;
-        background-color: rgb(255 255 255 /0.4);
-        outline: 5px solid black;
-        width: 35vw;
-        font-size: 4vw;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 1vw;
-    }
-
-    .pick1 {
-        width: 20vw;
-        height: 4vw;
-        font-size: 2vw;
-        color: rgb(0, 0, 0);
-        margin-top: 2vw;
-        
-    }
-
-    .but {
-        position: relative;
-        text-align: center;
-    }
-
-    .btn1 {
-        
-        font-size: 2.4vw;
-        font-family: Roboto;
-        padding: 1vw;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .retry {
-       text-align: center;
-       margin-left:auto;
-       margin-right:auto;
-       font-family: Roboto;
-       font-size: 2.5vw;
+html, body{
+    margin: 10px;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(190, 190, 190);
+    background-image: url("badgewar.png");
+    background-repeat: no-repeat;
+    background-size: 350vw;
+    background-position: -50vw;
+    background-attachment: fixed;
+    background-blend-mode: soft-light;
 }
 
-    textarea{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 60vw;
-        height: 150vw;
-        
-    }
 
 
-    .status {
-        font-size: 2.3vw;
-        position: relative;
-        font-family: Georgia;
-        text-align: center;
-        border-style: dashed;
-        border-width: 5px;
-        background-color: rgb(255 255 255 /0.4);
-    }
-
+.head{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    outline:5px solid black;
+    background-color: blueviolet;
+    padding: 2.5%;
+    font-size: 7vw;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
     
+}
 
+.member{
+    position: relative;
+    text-align: center;
+    background-color: rgb(255 255 255 /0.4);
+    outline: 5px solid black;
+    width: 35vw;
+    font-size: 4vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vw;
+}
 
+.pick1 {
+    width: 20vw;
+    height: 4vw;
+    font-size: 2vw;
+    color: rgb(0, 0, 0);
+    margin-top: 2vw;
     
+}
+
+.but {
+    position: relative;
+    text-align: center;
+}
+
+.btn1 {
+    
+    font-size: 2.4vw;
+    font-family: Roboto;
+    padding: 1vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.retry {
+   text-align: center;
+   margin-left:auto;
+   margin-right:auto;
+   font-family: Roboto;
+   font-size: 2.5vw;
+   background-color: white;
+   width: 10vw;
+}
+
+textarea{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
+    height: 150vw;
+    
+}
+
+
+.status {
+    font-size: 2.3vw;
+    position: relative;
+    font-family: Georgia;
+    text-align: center;
+    border-style: dashed;
+    border-width: 5px;
+    background-color: rgb(255 255 255 /0.4);
+}
+
+
+
+
+
 @media (min-width:1024px) {
-    html, body{
-        background-size: 200vw;
-        background-position: -2vw;
-    }
+html, body{
+    background-size: 200vw;
+    background-position: -2vw;
+}
 
-    .head{
-        font-size: 4.5vw;
-        width: 60vw;
-        text-align: center;
-    }
+.head{
+    font-size: 4.5vw;
+    width: 60vw;
+    text-align: center;
+}
 
-    .member{
-        width: 21vw;
-        font-size: 2vw;
-        padding: 1vw;
-    }
+.member{
+    width: 21vw;
+    font-size: 2vw;
+    padding: 1vw;
+}
 
-    .pick1 {
-        width: 12vw;
-        height: 4vw;
-        font-size: 1.3vw;
-        margin-top: 1.3vw;
-       
-    }
+.pick1 {
+    width: 12vw;
+    height: 4vw;
+    font-size: 1.3vw;
+    margin-top: 1.3vw;
+   
+}
 
-    .but {
-        position: relative;
-        text-align: center;
-    }
+.but {
+    position: relative;
+    text-align: center;
+}
 
-    .btn1 {
-        font-size: 1.3vw;
-        font-family: Roboto;
-        padding: 1vw;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.btn1 {
+    font-size: 1.3vw;
+    font-family: Roboto;
+    padding: 1vw;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    textarea{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 60vw;
-        height: 150vw;
-        
-    }
+textarea{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
+    height: 150vw;
+    
+}
 
 
-    .status {
-        font-size: 2.3vw;
-        position: relative;
-        font-family: Georgia;
-        text-align: center;
-        border-style: dashed;
-        border-width: 5px;
-        background-color: rgb(255 255 255 /0.4);
-    }
+.status {
+    font-size: 2.3vw;
+    position: relative;
+    font-family: Georgia;
+    text-align: center;
+    border-style: dashed;
+    border-width: 5px;
+    background-color: rgb(255 255 255 /0.4);
+}
 
 }
