@@ -54,8 +54,7 @@ content="width=device-width, initial-scale=1">
 <br><br>
 <script>
 
-    const mem = ["Seoyeon","Hyerin", "Jiwoo","Chaeyeon","Yooyeon","Soomin","Nakyoung","Yubin","Kaede","Dahyun","Kotone","Yeonji","Nien","Sohyun","Xinyu","Mayu","Lynn",
-            "Joobin","Hayeon","Shion","Chaewon","Sullin","Seoah","Jiyeon"];
+    const mem = ["Seoyeon","Hyerin", "Jiwoo","Chaeyeon","Yooyeon","Soomin","Nakyoung","Yubin","Kaede","Dahyun","Kotone","Yeonji","Nien","Sohyun","Xinyu","Mayu","Lynn",  "Joobin","Hayeon","Shion","Chaewon","Sullin","Seoah","Jiyeon"];
     let meml = mem.length;
     const st = ["runs quickly 🏃‍♀️", "fell into the mud 😣", "got stuck in the mud 😫","helps", "walking around 🚶‍♀️", "shouting for help📢", "covered in mud ",
             "slips in the mud", "boosts up🔋","unites together", "got distracted by"]
@@ -63,8 +62,7 @@ content="width=device-width, initial-scale=1">
 
     //random member
     function rand(pck){
-        let mem2 = mem.length;
-        var pck = Math.floor(Math.random()*mem2);
+        var pck = Math.floor(Math.random()*meml);
         let let1 = mem.at(pck);
         return {memb:let1, pk:pck}
     }
