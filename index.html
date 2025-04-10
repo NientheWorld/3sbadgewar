@@ -62,7 +62,8 @@ content="width=device-width, initial-scale=1">
 
     //random member
     function rand(pck){
-        var pck = Math.floor(Math.random()*meml);
+        let mem2 = mem.length;
+        var pck = Math.floor(Math.random()*mem2);
         let let1 = mem.at(pck);
         return {memb:let1, pk:pck}
     }
