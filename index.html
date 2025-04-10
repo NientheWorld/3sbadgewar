@@ -48,7 +48,8 @@ content="width=device-width, initial-scale=1">
 <button class="btn1" type="button" onclick="setTimeout(before)" id="start">Let the Badgewar Begin!</button>
 </div>
 <br><br>
-<textarea class="status" id="sts" rows="50" cols="45.5" readonly>Ready?</textarea>
+<textarea class="status" id="sts"  readonly>Ready?</textarea>
+<br><br>
 <script>
 
     const mem = ["Seoyeon","Hyerin", "Jiwoo","Chaeyeon","Yooyeon","Soomin","Nakyoung","Yubin","Kaede","Dahyun","Kotone","Yeonji","Nien","Sohyun","Xinyu","Mayu","Lynn",
@@ -58,17 +59,63 @@ content="width=device-width, initial-scale=1">
             "slips in the mud", "boosts up🔋","unites together", "got distracted by"]
     let st1 = st.length;
 
-    function rand(){
+    let elem = [];
+    let elem1 = elem.length;
+
+    //random member
+    function rand(pck){
         var pck = Math.floor(Math.random()*meml);
         let let1 = mem.at(pck);
-        return let1
+        return {memb:let1, pk:pck}
     }
-    
+    //random Scene
     function stat(){
         var pck1 = Math.floor(Math.random()*st1);
         let let2 = st.at(pck1);
         return let2
     }
+   
+    //Function
+    function scene(){
+        var let1 = rand().memb;//Member 1
+        var let2 = stat();//Scene 1
+        if (let2 == "helps") {
+                    var letsub = rand().memb;
+                    if (letsub == let1){
+                        let temp = [];
+                        temp.push(mem);
+                        temp.splice(letsub,1);
+                        var pck = Math.floor(Math.random()*temp);
+                        let let3 = mem.at(pck);
+                        //alert("Success 1")
+                        var x = let1 + " " + let2 + " " + let3 + " to get up into the mud 🤼" + "\n";
+                    }
+                    else {
+                          var x = let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
+                    }
+                }
+                
+                else if (let2 == "got distracted by") {
+                    var letsub = rand().memb;
+                    //alert("Success 2")
+                    var x = let1 + " " + let2 + " " + letsub + " 👀\n";
+                }
+
+                else if (let2 == "unites together") {
+                    var letsub = rand().memb;
+                    var letsub2 = rand().memb;
+                    //alert("Success 3")
+                     var x = let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
+                }
+
+                else {
+                    //alert("Success 4")
+                    var x = let1 + " " + let2 + "\n" ;
+                }
+
+                return x
+    }
+
 
     function before(){
         var cho = document.getElementById("choose").value;
@@ -79,7 +126,11 @@ content="width=device-width, initial-scale=1">
 
         else {
             const but = document.getElementById("start");
+            var cho = document.getElementById("choose").value;
+            document.getElementById("select").innerHTML = cho;
+            const rem = document.getElementById("choose")
             but.remove();
+            rem.remove();
             const rone = ["Mudrace"];
             let mode = rone.length;
             var shf = Math.floor(Math.random()*mode);
@@ -112,545 +163,223 @@ content="width=device-width, initial-scale=1">
                 document.getElementById("sts").innerHTML += "Round 1:" + rst + "\n\n";
             },10000)
 
+            
            
             //1
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
-                
+                document.getElementById("sts").innerHTML += star;
             },13000)
 
             //2
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                document.getElementById("sts").innerHTML += star;
             },16000)
 
             //3
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                document.getElementById("sts").innerHTML += star;
             },19000)
 
             //4
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                document.getElementById("sts").innerHTML += star;
             },22000)
             
             //5
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                document.getElementById("sts").innerHTML += star;
             },25000)
 
             //6
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                document.getElementById("sts").innerHTML += star;
             },28000)
 
             //7
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                document.getElementById("sts").innerHTML += star;
             },31000)
 
             //8
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                document.getElementById("sts").innerHTML += star;
             },34000)
 
             //9
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                document.getElementById("sts").innerHTML += star;
             },37000)
 
             //10
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " unites together" + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                document.getElementById("sts").innerHTML += star;
             },40000)
             
             //11
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1 
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " got " + let2 + " by " + letsub + " 👀\n\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " hold their hands and unite together" + "\n\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n\n" ;
-                }
+                document.getElementById("sts").innerHTML += star + '\n';
             },43000)
 
             //12
             setTimeout(() => {
-                var let1 = rand();
-
+                var leti = rand();
+                var let1 = leti.memb;
                 document.getElementById("sts").innerHTML += "🏆" + let1 + " got the first badge 🎖"  + "\n\n" ;
-                mem.splice(pck,1);
+                mem.splice(leti.pk,1);
                 
             },46000)
 
             //13
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
-                
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " got " + let2 + " by " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " unites together" + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
+                //let samp = mem.toString();
+                //document.getElementById("sts").innerHTML += samp + "\n";
+                document.getElementById("sts").innerHTML += star;
             },49000)
 
             //14
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1 
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " got " + let2 + " by " + letsub + " 👀\n\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " hold their hands and unite together" + "\n\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n\n" ;
-                }
+                document.getElementById("sts").innerHTML += star + '\n';
             },52000)
 
             //15
             setTimeout(() => {
-                var let1 = rand();
-
+                var leti = rand();
+                var let1 = leti.memb;
                 document.getElementById("sts").innerHTML += "🏆" + let1 + " got the second badge 🎖"  + "\n\n" ;
-                mem.splice(pck,1);
+                mem.splice(leti.pk,1);
                 
             },55000)
 
             //16
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " got " + let2 + " by " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " unites together" + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                document.getElementById("sts").innerHTML += star;
             },58000)
 
             //17
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1 
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " got " + let2 + " by " + letsub + " 👀\n\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " hold their hands and unite together" + "\n\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n\n" ;
-                }
+                document.getElementById("sts").innerHTML += star + '\n';
             },61000)
 
             //18
             setTimeout(() => {
-                var let1 = rand();
-
+                var leti = rand();
+                var let1 = leti.memb;
                 document.getElementById("sts").innerHTML += "🏆" + let1 + " got the third badge 🎖"  + "\n\n" ;
-                mem.splice(pck,1);
+                mem.splice(leti.pk,1);
                 
             },64000)
 
             //19
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " got " + let2 + " by " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " unites together" + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                document.getElementById("sts").innerHTML += star;
             },67000)
 
             //20
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1 
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " got " + let2 + " by " + letsub + " 👀\n\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " hold their hands and unite together" + "\n\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n\n" ;
-                }
+                document.getElementById("sts").innerHTML += star + '\n';
             },70000)
 
             //21
             setTimeout(() => {
-                var let1 = rand();
-
+                var leti = rand();
+                var let1 = leti.memb;
                 document.getElementById("sts").innerHTML += "🏆" + let1 + " got the fourth badge 🎖"  + "\n\n" ;
-                mem.splice(pck,1);
+                mem.splice(leti.pk,1);
                 
             },73000)
 
             //22
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " got " + let2 + " by " + letsub + " 👀\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " unites together" + "\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                document.getElementById("sts").innerHTML += star;
             },76000)
 
             //23
             setTimeout(() => {
-                var let1 = rand();
-                var let2 = stat();
+                var let1 = rand();//Member 1
+                var let2 = stat();//Scene 1 
+                var star = scene();//Result
                 
-                if (let2 == "helps") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n\n";
-                }
-                
-                else if (let2 == "got distracted by") {
-                    var letsub = rand();
-                    document.getElementById("sts").innerHTML += let1 + " got " + let2 + " by " + letsub + " 👀\n\n";
-                }
-
-                else if (let2 == "unites together") {
-                    var letsub = rand();
-                    var letsub2 = rand();
-                    document.getElementById("sts").innerHTML += let1 + ", " + letsub + " and " + letsub2 + " hold their hands and unite together" + "\n\n";
-                }
-
-                else {
-                    document.getElementById("sts").innerHTML += let1 + " " + let2 + "\n" ;
-                }
+                document.getElementById("sts").innerHTML += star + '\n';
             },79000)
 
 
             //24
             setTimeout(() => {
-                var let1 = rand();
-
+                var leti = rand();
+                var let1 = leti.memb;
                 document.getElementById("sts").innerHTML += "🏆" + let1 + " got the fifth badge 🎖"  + "\n\n" ;
-                mem.splice(pck,1);
+                mem.splice(leti.pk,1);
                 
             },82000)
 
