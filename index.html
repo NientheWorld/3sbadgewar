@@ -59,12 +59,10 @@ content="width=device-width, initial-scale=1">
             "slips in the mud", "boosts up🔋","unites together", "got distracted by"]
     let st1 = st.length;
 
-    let elem = [];
-    let elem1 = elem.length;
-
     //random member
     function rand(pck){
-        var pck = Math.floor(Math.random()*meml);
+        let mem2 = mem.length;
+        var pck = Math.floor(Math.random()*mem2);
         let let1 = mem.at(pck);
         return {memb:let1, pk:pck}
     }
