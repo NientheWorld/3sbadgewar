@@ -117,7 +117,8 @@ content="width=device-width, initial-scale=1">
                     var letsub = rand().memb;
                     var letsub2 = rand().memb;
                     
-                    if (letsub == let1 && let1 == letsub2 && letsub == letsub2){
+
+                    if (letsub == let1 && let1 == letsub2 && letsub == letsub2 ){
                         let temp = [];
                         temp = mem;
                         temp.splice(letsub,1);
@@ -131,6 +132,14 @@ content="width=device-width, initial-scale=1">
                             temp2.splice(letsub2,1);
                             var pck2 = Math.floor(Math.random()*temp2);
                             let let4 = temp2.at(pck);
+                        }
+
+                        else if (letsub2 == let1) {
+                            let temp3 = [];
+                            temp3 = temp;
+                            temp3.splice(letsub2,1);
+                            var pck2 = Math.floor(Math.random()*temp3);
+                            let let4 = temp3.at(pck);
                         }
 
                         else{
