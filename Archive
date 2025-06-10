@@ -1,0 +1,64 @@
+if (letsub2 == let1){
+                        let temp = [];
+                        temp = mem;
+                        temp.splice(letsub2,1);
+                        var pck = Math.floor(Math.random()*temp);
+                        let let4 = temp.at(pck);
+
+                            if (let4 == let3){
+                                let temp = [];
+                                temp = mem;
+                                temp.splice(let3,1);
+                                var pck = Math.floor(Math.random()*temp);
+                                let let5 = temp.at(pck);
+                                
+                            }
+                        }
+                    }
+                    
+                    
+
+                    
+                    if (letsub == let1 && let1 == letsub2 && letsub == letsub2 ){
+                        let temp = [];
+                        temp = mem;
+                        temp.splice(letsub,1);
+                        var pck = Math.floor(Math.random()*temp);
+                        let let3 = temp.at(pck);
+                        
+                        
+                        if (letsub == letsub2) {
+                            let temp2 = [];
+                            temp2 = temp;
+                            temp2.splice(letsub2,1);
+                            var pck2 = Math.floor(Math.random()*temp2);
+                            let let4 = temp2.at(pck);
+                        }
+
+                        else if (letsub2 == let1) {
+                            let temp3 = [];
+                            temp3 = temp;
+                            temp3.splice(letsub2,1);
+                            var pck2 = Math.floor(Math.random()*temp3);
+                            let let4 = temp3.at(pck);
+                        }
+
+                        else{
+                            let let4 = letsub2;
+                        }
+
+                        
+                        var x = let1 + ", " + let3 + " and " + let4 + " "+ let2 + "\n";
+                    }
+                    else {
+                        var x = let1 + ", " + letsub + " and " + letsub2 + " "+ let2 + "\n";
+                    }
+
+
+                    //alert("Success 3")
+                }
+
+                else {
+                    //alert("Success 4")
+                    var x = let1 + " " + let2 + "\n" ;
+                }
