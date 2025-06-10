@@ -96,7 +96,7 @@ content="width=device-width, initial-scale=1">
                     }
                 }
                 
-                else if (let2 == "got distracted by") {
+    else if (let2 == "got distracted by") {
                     var letsub = rand().memb;
                     //alert("Success 2")
                     
@@ -113,9 +113,8 @@ content="width=device-width, initial-scale=1">
                     }
                 }
 
-                else if (let2 == "unites together") {
+`else if (let2 == "unites together") {
                     var letsub = rand().memb;
-                    var letsub2 = rand().memb;
                     
                     if (letsub == let1){
                         let temp = [];
@@ -124,41 +123,50 @@ content="width=device-width, initial-scale=1">
                         var pck = Math.floor(Math.random()*temp);
                         let let3 = temp.at(pck);
 
-                        if (letsub2 == let1){
-                        let temp = [];
-                        temp = mem;
-                        temp.splice(letsub2,1);
-                        var pck = Math.floor(Math.random()*temp);
-                        let let4 = temp.at(pck);
+                        var letsub2 = rand().memb;
 
-                            if (let4 == let3){
-                                let temp = [];
-                                temp = mem;
-                                temp.splice(let3,1);
-                                var pck = Math.floor(Math.random()*temp);
-                                let let3 = temp.at(pck);
-                            }
+                        if (letsub2 == let3){
+                            let temp1 = [];
+                            temp1 = mem;
+                            temp1.splice(letsub,1);
+                            var pck = Math.floor(Math.random()*temp1);
+                            let let4 = temp1.at(pck);
                         }
-                        var x = let1 + ", " + let3 + " and " + let4 + " "+ let2 + "\n";
+                        
+                        else if (letsub2 == letsub){
+                                let temp2 = [];
+                                temp2 = mem;
+                                temp2.splice(letsub,1);
+                                var pck = Math.floor(Math.random()*temp2);
+                                let let4 = temp2.at(pck);
+                        }
+
+                        else {
+                            
+                        }
                         
                     }
+                    else{
+                        var letsub2 = rand().memb;
 
-                    else if ((letsub != let1))  {
-                        if (letsub == letsub2){
-                            let temp = [];
-                            temp = mem;
-                            temp.splice(letsub2,1);
-                            var pck = Math.floor(Math.random()*temp);
-                            let let3 = temp.at(pck);
+                        if (letsub2 == let3){
+                            let temp1 = [];
+                            temp1 = mem;
+                            temp1.splice(letsub,1);
+                            var pck = Math.floor(Math.random()*temp1);
+                            let let4 = temp1.at(pck);
+                        }
+                        
+                        else if (letsub2 == letsub){
+                                let temp2 = [];
+                                temp2 = mem;
+                                temp2.splice(letsub,1);
+                                var pck = Math.floor(Math.random()*temp2);
+                                let let4 = temp2.at(pck);
+                        }
 
-                            if (let3 == let1){
-                                let temp = [];
-                                temp = mem;
-                                temp.splice(let3,1);
-                                var pck = Math.floor(Math.random()*temp);
-                                let let4 = temp.at(pck);
-                            }
-                            var x = let1 + ", " + let3 + " and " + let4 + " "+ let2 + "\n";
+                        else {
+                            
                         }
                     }
                 }
