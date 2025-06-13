@@ -79,105 +79,71 @@ content="width=device-width, initial-scale=1">
     //Function
     function scene(){
         var let1 = rand().memb;//Member 1
+        var let3 = rand().memb;//Member 2
+        var let4 = rand().memb;//Member 3
         var let2 = stat();//Scene 1
+        const membs = [];
+        membs.push(let1);
+        let temp = mem;
+        let test1 = membs.includes(let3)
+
+        if (let2 != "helps" || let2 !="got distracted by" || let2 !="unites together" ){
+
+            var x = let1 + " " + let2 + "\n";
+
+        }
+
+
+        else if ( test1 == true){
+
+             temp.splice(let3,1);
+            var pck = Math.floor(Math.random()*temp);
+            let let3 = temp.at(pck);
+            test2 = membs.includes(let4)
+             if (test2 = true){
+                temp.splice(let4,1);
+                var pck = Math.floor(Math.random()*temp);
+                let let4 = temp.at(pck);
+            }
+
+            else {
+                membs.push(let4);
+                var let4 = let4;
+            }
+        }
+
+
+        else {
+             membs.push(let3);
+             test2 = membs.includes(let4)
+            if (test2 = true){
+                temp.splice(let4,1);
+                var pck = Math.floor(Math.random()*temp);
+                let let4 = temp.at(pck);
+            }
+
+            else {
+                membs.push(let4);
+                var let4 = let4;
+            }
+
+        }
         if (let2 == "helps") {
-                    var letsub = rand().memb;
-                    if (letsub == let1){
-                        let temp = [];
-                        temp = mem;
-                        temp.splice(letsub,1);
-                        var pck = Math.floor(Math.random()*temp);
-                        let let3 = temp.at(pck);
-                        //alert("Success 1")
-                        var x = let1 + " " + let2 + " " + let3 + " to get off the mud 🤼" + "\n";
-                    }
-                    else {
-                          var x = let1 + " " + let2 + " " + letsub + " to get up into the mud 🤼" + "\n";
-                    }
-                }
-                
-        else if (let2 == "got distracted by") {
-                    var letsub = rand().memb;
-                    //alert("Success 2")
-                    
-                    if (letsub == let1){
-                        let temp = [];
-                        temp = mem;
-                        temp.splice(letsub,1);
-                        var pck = Math.floor(Math.random()*temp);
-                        let let3 = temp.at(pck);
-                        var x = let1 + " " + let2 + " " + let3 + " 👀\n";
-                    }
-                    else {
-                        var x = let1 + " " + let2 + " " + letsub + " 👀\n";
-                    }
-                }
+            var x = let1 + " " + let2 + " " + let3 + " to get off the mud 🤼" + "\n";
+        }
 
-    else if (let2 == "unites together") {
-                    var letsub = rand().memb;
-                    
-                    if (letsub == let1){
-                        let temp = [];
-                        temp = mem;
-                        temp.splice(letsub,1);
-                        var pck = Math.floor(Math.random()*temp);
-                        let let3 = temp.at(pck);
+        else if (let2 == "got distracted by"){
+            var x = let1 + " " + let2 + " " + let3 + " 👀\n";
+        }
 
-                        var letsub2 = rand().memb;
+        else if (let2 == "unites together") {
 
-                        if (letsub2 == let3){
-                            let temp1 = [];
-                            temp1 = mem;
-                            temp1.splice(letsub,1);
-                            var pck = Math.floor(Math.random()*temp1);
-                            let let4 = temp1.at(pck);
-                        }
-                        
-                        else if (letsub2 == letsub){
-                                let temp2 = [];
-                                temp2 = mem;
-                                temp2.splice(letsub,1);
-                                var pck = Math.floor(Math.random()*temp2);
-                                let let4 = temp2.at(pck);
-                        }
-
-                        else {
-                           letsub2 = let4
-                        }
-                        
-                    }
-                    else{
-                        letsub1 = let3;
-                        var letsub2 = rand().memb;
-
-                        if (letsub2 == let3){
-                            let temp1 = [];
-                            temp1 = mem;
-                            temp1.splice(letsub,1);
-                            var pck = Math.floor(Math.random()*temp1);
-                            let let4 = temp1.at(pck);
-                        }
-                        
-                        else if (letsub2 == letsub){
-                                let temp2 = [];
-                                temp2 = mem;
-                                temp2.splice(letsub,1);
-                                var pck = Math.floor(Math.random()*temp2);
-                                let let4 = temp2.at(pck);
-                        }
-
-                        else {
-                            let4 = letsub2;
-                        }
-                    }
-
-                    var x = let1 + ", " + let3 + " and " + let4 + " "+ let2 + "\n";
-                        
-
-                        
-
+            var x = let1 + ", " + let3 + " and " + let4 + " "+ let2 + "\n";
+        }
+    
+        
         return x
-    }
+
     }
 
 
